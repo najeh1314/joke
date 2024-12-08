@@ -7,10 +7,10 @@
     <title>Entertainment Page</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <h1 id="name">Rate me:</h1>
         <div>
-            <label>Combient yu m'aime sur 10:</label>
+            <label>Combient m'aimes tu sur 10:</label>
             <div>
                 <input type="radio" id="rate1" name="amour" value="1"><label for="rate1">1</label>
                 <input type="radio" id="rate2" name="amour" value="2"><label for="rate2">2</label>
@@ -46,16 +46,19 @@
         <label id="happyLabel"  style="visibility: hidden; font-size: small; color: red;">veillez repondre svp!!</label>
         <br><br><br>
 
-        <label for="confirmCheck">
+        <label id="areYouSure" for="confirmCheck">
             <input type="checkbox" id="confirmCheck"> Are you sure?
         </label>
         <br><br><br>
 
         <div id="divToMomve" style="display: block; margin: auto;">
             <button id="btnValidate">Send me your answer</button>
-            <p style="color: red; visibility: hidden;" id="badAnswerEl">BAD ANSWER, i don't like it you, so can't catch the button </p>
+            <p style="color: red; visibility: hidden;" id="badAnswerEl">BAD ANSWER, i don't like it , so you can't catch the button </p>
         </div>
 
+    </div>
+    <div class="container" id="end" style="display: none;">
+        <h1 style="color: red; margin: auto; "> Good answer <br> I LOVE YOU  </h1>
     </div>
     <script src="script.js"></script>
 </body>

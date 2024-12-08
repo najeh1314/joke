@@ -7,29 +7,6 @@ const happy = document.querySelector('input[name="happy"]:checked');
 const isConfirmed = document.getElementById('confirmCheck').checked;
 const btnSubmittEl = document.getElementById("btnValidate");
 
-// Action sur le bouton "Valider" lorsqu'il est cliqué
-btnSubmittEl.addEventListener('click', () => {
-    const amour = document.querySelector('input[name="amour"]:checked'); // Rechercher ici à chaque clic
-    const tenderness = document.getElementById('tenderness').value;
-    const happy = document.querySelector('input[name="happy"]:checked');
-    const isConfirmed = document.getElementById('confirmCheck').checked;
-
-    amourLabelEl.style.visibility = 'hidden';
-    // Vérifier si "amour"  n'estpas null
-    if (!amour) {
-        console.log('Veuillez répondre à toutes les questions.');
-        amourLabelEl.style.visibility = 'visible'; 
-        return;
-    }
-    happyLabelEl.style.visibility = 'hidden';
-    // Vérifier si "happy" n'est pas null
-    if (!happy) {
-        console.log('Veuillez répondre à toutes les questions.');
-        happyLabelEl.style.visibility = 'visible'; 
-        return;
-    }
-});
-
 btnSubmittEl.onmouseover = () => {
     const amour = document.querySelector('input[name="amour"]:checked');
     const tenderness = document.getElementById('tenderness');
@@ -59,6 +36,57 @@ btnSubmittEl.onmouseover = () => {
     }
 
 }
+
+// Action sur le bouton "Valider" lorsqu'il est cliqué
+btnSubmittEl.addEventListener('click', () => {
+    const amour = document.querySelector('input[name="amour"]:checked'); // Rechercher ici à chaque clic
+    const tenderness = document.getElementById('tenderness').value;
+    const happy = document.querySelector('input[name="happy"]:checked');
+    const isConfirmed = document.getElementById('confirmCheck');
+    const containerEl = document.getElementById('container');
+    const endEl = document.getElementById('end');
+
+
+    amourLabelEl.style.visibility = 'hidden';
+    // Vérifier si "amour"  n'estpas null
+    if (!amour) {
+        amourLabelEl.style.visibility = 'visible'; 
+        return;
+    }
+    happyLabelEl.style.visibility = 'hidden';
+    // Vérifier si "happy" n'est pas null
+    if (!happy) {
+        happyLabelEl.style.visibility = 'visible'; 
+        return;
+    }
+    // Vérifier si "confirmed is checked" n'est pas null
+    if (!isConfirmed.checked) {
+        const areYouSureEl = document.getElementById('areYouSure');
+    
+        // Vérifier que l'élément existe
+        if (areYouSureEl) {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    areYouSureEl.classList.add('red');
+                }, i * 1000); // Ajouter un décalage de 1000ms pour chaque itération
+                
+                setTimeout(() => {
+                    areYouSureEl.classList.remove('red');
+                }, i * 1000 + 500); // Enlever la classe après 500ms
+            }
+        }
+    }
+
+    //L'action principale du btn
+    console.log(containerEl);
+    containerEl.style.display = 'none';
+    endEl.style.display = 'block';
+
+    
+    
+
+});
+
 
 
 // Déplacer le bouton à une position aléatoire
