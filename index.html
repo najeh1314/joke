@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Entertainment Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="name">Rate me:</h1>
+        <div>
+            <label>Combient yu m'aime sur 10:</label>
+            <div>
+                <input type="radio" id="rate1" name="amour" value="1"><label for="rate1">1</label>
+                <input type="radio" id="rate2" name="amour" value="2"><label for="rate2">2</label>
+                <input type="radio" id="rate3" name="amour" value="3"><label for="rate3">3</label>
+                <input type="radio" id="rate4" name="amour" value="4"><label for="rate4">4</label>
+                <input type="radio" id="rate5" name="amour" value="5"><label for="rate5">5</label>
+                <input type="radio" id="rate6" name="amour" value="6"><label for="rate6">6</label>
+                <input type="radio" id="rate7" name="amour" value="7"><label for="rate7">7</label>
+                <input type="radio" id="rate8" name="amour" value="8"><label for="rate8">8</label>
+                <input type="radio" id="rate9" name="amour" value="9"><label for="rate9">9</label>
+                <input type="radio" id="rate10" name="amour" value="10"><label for="rate10">10</label>
+            </div>
+        </div>
+        <label id="amourLabel" style="visibility: hidden; font-size: small; color: red;">Specifie une note pour l'amour stp!!</label>
+        <br><br><br>
+
+        <div>
+            <label for="tenderness">Tendresse:</label>
+            <select id="tenderness" name="tenderness">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <option value="very-high">Very High</option>
+            </select>
+        </div>
+        <div>
+            <label>Est-ce que tu es heureuse avec moi?</label>
+            <div>
+                <input type="radio" id="happyYes" name="happy" value="yes"><label for="happyYes">Oui</label>
+                <input type="radio" id="happyNo" name="happy" value="no"><label for="happyNo">Non</label>
+            </div>
+        </div>
+        <label id="happyLabel"  style="visibility: hidden; font-size: small; color: red;">veillez repondre svp!!</label>
+        <br><br><br>
+
+        <label for="confirmCheck">
+            <input type="checkbox" id="confirmCheck"> Are you sure?
+        </label>
+        <br><br><br>
+
+        <div id="divToMomve" style="display: block; margin: auto;">
+            <button id="btnValidate">Send me your answer</button>
+            <p style="color: red; visibility: hidden;" id="badAnswerEl">BAD ANSWER, i don't like it you, so can't catch the button </p>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

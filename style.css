@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Radio Buttons Group */
+div > div input[type="radio"] + label {
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+}
+
+div > div input[type="radio"]:checked + label {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Select Dropdown */
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Buttons */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional Styling for Radio Button Sections */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+div > div {
+    margin-bottom: 15px;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+/* Boutons radio en ligne horizontale */
+div > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacement entre les boutons */
+    margin-bottom: 15px;
+}
+
+div > div input[type="radio"] + label {
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+}
+
+div > div input[type="radio"]:checked + label {
+    font-weight: bold;
+    color: #007bff;
+}
